@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   output: "export", 
   
   // 2. VERY IMPORTANT: Replace this with your exact GitHub repository name
-  basePath: "/scroll-animation-assignment", 
+  basePath: "/scroll-animation-learning", 
 
   images: {
     // 3. Required for static exports on GitHub Pages, even for local images
