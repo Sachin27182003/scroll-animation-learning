@@ -64,4 +64,6 @@ You can easily tweak the feel of the animation by adjusting the variables inside
 
 ## 📜 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source and available for all.
+
+## Thank Youu for visiting my project !!
