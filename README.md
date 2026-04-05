@@ -66,4 +66,4 @@ You can easily tweak the feel of the animation by adjusting the variables inside
 
 This project is open-source and available for all.
 
-## Thank Youu for visiting my project !!
+##                  ❤️ Thank Youu for visiting my project !! ❤️
