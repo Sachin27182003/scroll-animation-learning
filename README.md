@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏎️ Scroll-Driven Hero Section Animation
 
-## Getting Started
+A high-performance, scroll-linked hero section built with **Next.js**, **Tailwind CSS**, and **GSAP**. 
 
-First, run the development server:
+This project demonstrates how to create a premium, Apple-style scroll experience where user scrolling controls a timeline animation (scaling and moving a 3D-like object), rather than relying on standard time-based autoplay.
 
+## ✨ Features
+
+* **Scroll-Scrubbing Animation:** The central visual element scales and translates fluidly based on the user's scroll depth (`scrub: 1`).
+* **Section Pinning:** The hero section locks into place (`pin: true`) while the animation completes, releasing only when the object fills the screen.
+* **Initial Load Sequence:** Staggered, time-based entrance animations for typography and statistics using `gsap.timeline()`.
+* **Hardware Accelerated:** Animations rely strictly on CSS transforms (`scale`, `translateY`) and `opacity` to bypass layout thrashing and maintain a solid 60fps.
+* **Optimized Image Delivery:** Uses Next.js `<Image>` component with `fill` properties for perfect responsiveness and automatic WebP conversion.
+* **Fully Responsive:** Adapts seamlessly to mobile, tablet, and desktop viewports using Tailwind utility classes.
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Next.js 14+ (App Router)](https://nextjs.org/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **Animation Engine:** [GSAP (GreenSock)](https://gsap.com/)
+* **Scroll Integration:** GSAP ScrollTrigger & `@gsap/react`
+* **Language:** TypeScript / React
+
+---
+
+## 🚀 Setup & Structure
+
+Make sure you have Node.js installed (v18.17 or higher recommended). 
+
+**1. Clone the Repository**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Sachin27182003/scroll-animation-learning.git
+cd scroll-animation-assignment
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**2. Install Dependencies & Run**
+```bash
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**3. Project Structure**
+Open `http://localhost:3000` in your browser. The code is organized as follows:
+```text
+├── app/
+│   ├── layout.tsx         # Root layout and global fonts
+│   ├── page.tsx           # Main entry point (Imports HeroSection)
+│   └── globals.css        # Tailwind directives
+├── components/
+│   └── HeroSection.tsx    # Core GSAP animation logic and UI
+├── public/                # Local images (e.g., local-car.png)
+└── tailwind.config.ts     # Tailwind configuration
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎨 Customizing the Animation
 
-To learn more about Next.js, take a look at the following resources:
+You can easily tweak the feel of the animation by adjusting the variables inside the `useGSAP` hook in `components/HeroSection.tsx`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Change the End Zoom Size:** Modify the `scale: 3.5` property inside the `gsap.to()` block. Higher numbers = bigger zoom.
+* **Change the Scroll Duration:** The `h-screen` container combined with `end: "+=100%"` in ScrollTrigger dictates how long the user must scroll to finish the animation. Change it to `end: "+=200%"` to make the animation last twice as long.
+* **Change the Smoothing:** Adjust `scrub: 1` to `scrub: 0.5` for a snappier response to the scroll wheel, or `scrub: true` for zero delay.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📜 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and available under the [MIT License](LICENSE).
