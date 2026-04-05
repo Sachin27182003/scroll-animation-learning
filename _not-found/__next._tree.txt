@@ -1,2 +1,2 @@
-:HL["/scroll-animation-assignment/_next/static/chunks/0406jodkr~-~t.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"i0AB-7TuT1qVxVFBsweZw"}
+:HL["/scroll-animation-learning/_next/static/chunks/0406jodkr~-~t.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"GAbDM2-2N6cXrcEHMsSgS"}
