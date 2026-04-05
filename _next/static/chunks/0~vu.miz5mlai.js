@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,11520,t=>{t.q("/scroll-animation-assignment/_next/static/media/mcar.0poz~2trum_l~.png")}]);
